@@ -30,6 +30,7 @@ def get_64_bit_main_arena_offset( libc : str ) -> int :
 
 
 def get_output( command : str ) -> str :
+
     p = os.popen( command )
     s = p.read()
     p.close()

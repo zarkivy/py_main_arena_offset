@@ -8,14 +8,14 @@ python 版本方便集成于 exploit 中
 
 感谢 m4x 学长：[shell版](https://github.com/bash-c/main_arena_offset)
 
-
+##
 
 ## 安装
 
 ```sh
 git clone https://github.com/IZAY01/py_main_arena_offset
 cd py_main_arena_offset
-python setup.py develop
+python3 setup.py develop
 ```
 
 ## 

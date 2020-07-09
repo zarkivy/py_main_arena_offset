@@ -1,8 +1,7 @@
 import os
 
 
-
-def main_arena_offset( libc : str ) -> int :
+def get_main_arena_offset( libc : str ) -> int :
     
     file_libc = get_output("file " + libc)
     if( file_libc.find("64-bit") == -1 ):
@@ -20,7 +19,7 @@ def get_32_bit_main_arena_offset( libc : str ) -> int :
 
 
 
-def get_64_bit_main_arena_offset( libc : str) -> int :
+def get_64_bit_main_arena_offset( libc : str ) -> int :
     
     malloc_hook_str = get_output("objdump -j .data -d " + libc + "|grep __malloc_hook |cut -d' ' -f 1")
     realloc_hook_str = get_output("objdump -j .data -d " + libc + "|grep __realloc_hook |cut -d' ' -f 1")
@@ -40,4 +39,4 @@ def get_output( command : str ) -> str :
 
 if __name__ == "__main__" :
 
-    print(hex(main_arena_offset("libc.so")))
+    print(hex(get_main_arena_offset("./libc.so")))

@@ -3,6 +3,10 @@ import os
 
 def get_main_arena_offset( libc : str ) -> int :
     
+    if not os.path.exists( libc ): 
+        print("cannot open '" + libc + "' (No such file or directory)")
+        return 0
+
     file_libc = get_output("file " + libc)
     if( file_libc.find("64-bit") == -1 ):
         return get_32_bit_main_arena_offset( libc )

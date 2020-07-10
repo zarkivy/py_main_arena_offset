@@ -41,6 +41,8 @@ def get_output( command : str ) -> str :
     return s
 
 
+gmao = get_main_arena_offset 
+
 
 if __name__ == "__main__" :
 

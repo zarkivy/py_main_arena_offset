@@ -17,7 +17,7 @@ python 版本方便集成于 exploit 中
 ```sh
 git clone https://github.com/IZAY01/py_main_arena_offset
 cd py_main_arena_offset
-python3 setup.py develop
+sudo python3 setup.py develop
 ```
 
 ## 
@@ -28,6 +28,7 @@ python3 setup.py develop
 from pymao import *
 
 libc = "./libc-2.27.so"
-main_arena_offset = get_main_arena_offset( libc ) 
+main_arena_offset = gmao( libc )
+# or main_arena_offset = get_main_arena_offset( libc ) 
 ```
 

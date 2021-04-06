@@ -19,6 +19,7 @@ git clone https://github.com/IZAY01/py_main_arena_offset
 cd py_main_arena_offset
 sudo python3 setup.py develop
 ```
+依赖于 objdump，请确保你的 Linux 中已安装 binutils 包
 
 ## 
 
